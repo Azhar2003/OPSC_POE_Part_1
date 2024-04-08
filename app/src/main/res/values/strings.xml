@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">OPSC POE</string>
+    <string name="logo_name">Hour Glass Hub</string>
+    <string name="slogan_name">Track Your Goals</string>
+    <string name="Prog">Programming 3A</string>
+    <string name="OPSC">Open Source Coding </string>
+    <string name="IPMA">IT Project Management</string>
+    <string name="INRS">Introduction to Research</string>
+    <string name="expand_all">EXPAND ALL</string>
+    <string name="Total_hours">Total Hours</string>
 </resources>
