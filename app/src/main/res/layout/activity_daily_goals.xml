@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DailyGoals">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="100dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp">
+
+
+        <TextView
+            fontPath="fonts/nunito_light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:alpha="0.8"
+            android:text="Fill out your daily goals:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"
+            tools:ignore="MissingPrefix" />
+
+
+
+        <TextView
+            fontPath="fonts/nunito_light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="60dp"
+            android:text="Minimum Daily Goal"
+            android:textSize="25dp"
+            tools:ignore="MissingPrefix" />
+
+
+
+        <EditText
+            android:id="@+id/addTaskTitle"
+            fontPath="fonts/nunito_light.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_border"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="20sp"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            fontPath="fonts/nunito_light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="40dp"
+            android:textSize="25dp"
+            android:text="Maximum Daily Goal"
+            tools:ignore="MissingPrefix" />
+
+        <EditText
+            android:id="@+id/addTaskDescription"
+            fontPath="fonts/nunito_light.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_border"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="20sp"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            fontPath="fonts/nunito_light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="40dp"
+            android:text="Today's Date (dd/mm/yyyy)"
+            android:textSize="25dp"
+            tools:ignore="MissingPrefix" />
+
+        <EditText
+            android:id="@+id/taskDate"
+            fontPath="fonts/nunito_light.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_border"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="20sp"
+            tools:ignore="MissingPrefix" />
+
+        <Button
+            android:id="@+id/addTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="125dp"
+            android:background="@drawable/btn_background"
+            android:text="Add Goals"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</ScrollView>
