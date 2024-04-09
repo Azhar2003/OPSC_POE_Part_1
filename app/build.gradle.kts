@@ -50,6 +50,8 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("com.github.bumptech.glide:glide:5.0.0-rc01")
     implementation("com.github.bumptech.glide:okhttp3-integration:5.0.0-rc01")
+    implementation("androidx.activity:activity:1.8.0")
+    implementation("com.applandeo:material-calendar-view:1.9.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

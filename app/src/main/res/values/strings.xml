@@ -24,4 +24,6 @@
     <string name="task_start_time">Task Start Time</string>
     <string name="task_end_time">Task End Time</string>
     <string name="add_task">Add task</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
 </resources>
