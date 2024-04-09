@@ -16,4 +16,12 @@
     <string name="sureToMarkAsComplete">Are you sure you want to mark this task as completed.</string>
     <string name="congrats_you_have_completed_the_task_successfully">Well Done!... You have completed your task successfully..</string>
     <string name="totalhours">You have spent 5 hours on this task today</string>
+    <string name="fill_the_details_below">Fill the details below:</string>
+    <string name="todo">TODO</string>
+    <string name="task_category">Task Category</string>
+    <string name="task_description">Task description</string>
+    <string name="task_date">Task date</string>
+    <string name="task_start_time">Task Start Time</string>
+    <string name="task_end_time">Task End Time</string>
+    <string name="add_task">Add task</string>
 </resources>

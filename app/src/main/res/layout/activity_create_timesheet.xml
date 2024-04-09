@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="20dp"
         android:paddingTop="0dp"
@@ -26,9 +26,9 @@
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="140dp"
+                android:layout_marginStart="140dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
                 android:background="@color/blue"
                 android:padding="5dp"
                 app:srcCompat="@drawable/baseline_3p_24"
@@ -39,42 +39,39 @@
                 android:id="@+id/floatingActionButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginLeft="210dp"
+                android:layout_marginStart="210dp"
                 android:layout_marginTop="80dp"
                 android:backgroundTint="@color/black"
                 android:clickable="true"
-                android:contentDescription="TODO"
+                android:contentDescription="@string/todo"
                 android:tint="@color/white"
                 app:srcCompat="@drawable/baseline_add_a_photo_24" />
         </RelativeLayout>
 
         <TextView
-            fontPath="fonts/nunito_light.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:alpha="0.8"
-            android:text="Fill the details below:"
+            android:text="@string/fill_the_details_below"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             tools:ignore="MissingPrefix" />
 
         <TextView
-            fontPath="fonts/nunito_light.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
             android:layout_marginTop="10dp"
-            android:text="Task Category"
+            android:text="@string/task_category"
             tools:ignore="MissingPrefix" />
 
 
 
         <EditText
             android:id="@+id/addTaskTitle"
-            fontPath="fonts/nunito_light.ttf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -85,17 +82,15 @@
             tools:ignore="MissingPrefix" />
 
         <TextView
-            fontPath="fonts/nunito_light.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
             android:layout_marginTop="20dp"
-            android:text="Task description"
+            android:text="@string/task_description"
             tools:ignore="MissingPrefix" />
 
         <EditText
             android:id="@+id/addTaskDescription"
-            fontPath="fonts/nunito_light.ttf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -106,17 +101,15 @@
             tools:ignore="MissingPrefix" />
 
         <TextView
-            fontPath="fonts/nunito_light.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
             android:layout_marginTop="20dp"
-            android:text="Task date"
+            android:text="@string/task_date"
             tools:ignore="MissingPrefix" />
 
         <EditText
             android:id="@+id/taskDate"
-            fontPath="fonts/nunito_light.ttf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -130,9 +123,9 @@
             fontPath="fonts/nunito_light.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
             android:layout_marginTop="20dp"
-            android:text="Task Start Time"
+            android:text="@string/task_start_time"
             tools:ignore="MissingPrefix" />
 
         <EditText
@@ -148,17 +141,15 @@
             tools:ignore="MissingPrefix" />
 
         <TextView
-            fontPath="fonts/nunito_light.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
             android:layout_marginTop="20dp"
-            android:text="Task End Time"
+            android:text="@string/task_end_time"
             tools:ignore="MissingPrefix" />
 
         <EditText
             android:id="@+id/taskEndTime"
-            fontPath="fonts/nunito_light.ttf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -174,7 +165,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:background="@drawable/btn_background"
-            android:text="Add task"
+            android:text="@string/add_task"
             android:textColor="@color/white" />
 
 
