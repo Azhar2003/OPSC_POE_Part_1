@@ -8,4 +8,12 @@
     <string name="INRS">Introduction to Research</string>
     <string name="expand_all">EXPAND ALL</string>
     <string name="Total_hours">Total Hours</string>
+    <string name="delete_confirmation">Confirmation</string>
+    <string name="sureToDelete">Are you sure you want to delete the task?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="confirmation">Completed the task :) ..</string>
+    <string name="sureToMarkAsComplete">Are you sure you want to mark this task as completed.</string>
+    <string name="congrats_you_have_completed_the_task_successfully">Well Done!... You have completed your task successfully..</string>
+    <string name="totalhours">You have spent 5 hours on this task today</string>
 </resources>
