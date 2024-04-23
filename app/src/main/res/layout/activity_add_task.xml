@@ -100,6 +100,16 @@
             android:text="View Graphs"
             android:textColor="@color/white" />
 
+        <Button
+            android:id="@+id/NextPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_background"
+            android:text="View Next Page"
+            android:textColor="@color/white" />
+
     </LinearLayout>
 
 </LinearLayout>
