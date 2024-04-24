@@ -174,7 +174,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/btn_background"
-            android:text="View Previous Page"
+            android:text="@string/view_previous_page"
             android:textColor="@color/white" />
 
     </LinearLayout>

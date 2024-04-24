@@ -26,4 +26,26 @@
     <string name="add_task">Add task</string>
     <string name="back"><![CDATA[<-]]></string>
     <string name="forward"><![CDATA[->]]></string>
+    <string name="signup">SignUp</string>
+    <string name="login">Login</string>
+    <string name="categories">Categories</string>
+    <string name="time_tracker">Time Tracker</string>
+    <string name="all_tasks">All tasks</string>
+    <string name="add_daily_goals">Add Daily Goals</string>
+    <string name="view_graphs">View Graphs</string>
+    <string name="view_next_page">View Next Page</string>
+    <string name="view_previous_page">View Previous Page</string>
+    <string name="fill_out_your_daily_goals">Fill out your daily goals:</string>
+    <string name="minimum_daily_goal">Minimum Daily Goal</string>
+    <string name="maximum_daily_goal">Maximum Daily Goal</string>
+    <string name="today_s_date_dd_mm_yyyy">Today\'s Date (dd/mm/yyyy)</string>
+    <string name="add_goals">Add Goals</string>
+    <string name="february_2024">February 2024</string>
+    <string name="sun">SUN</string>
+    <string name="mon">MON</string>
+    <string name="tue">TUE</string>
+    <string name="wed">WED</string>
+    <string name="thur">THUR</string>
+    <string name="fri">FRI</string>
+    <string name="sat">SAT</string>
 </resources>

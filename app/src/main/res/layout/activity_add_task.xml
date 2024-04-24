@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Time Tracker"
+                android:text="@string/time_tracker"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp" />
 
@@ -31,7 +30,7 @@
                 fontPath="fonts/nunito_extra_bold.ttf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="All tasks"
+                android:text="@string/all_tasks"
                 android:textColor="@color/colorPrimary"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -41,10 +40,12 @@
 
         <ImageView
             android:id="@+id/calendar"
-            android:layout_width="30dp"
+            android:layout_width="29dp"
             android:layout_height="30dp"
             android:layout_gravity="right|center"
-            android:background="@drawable/calendar" />
+            android:background="@drawable/calendar"
+            android:contentDescription="TODO"
+            tools:ignore="RtlHardcoded" />
 
     </FrameLayout>
 
@@ -56,14 +57,15 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/noDataImage"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:contentDescription="TODO" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/taskRecycler"
@@ -87,7 +89,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/btn_background"
-            android:text="Add Daily Goals"
+            android:text="@string/add_daily_goals"
             android:textColor="@color/white" />
 
         <Button
@@ -97,7 +99,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/btn_background"
-            android:text="View Graphs"
+            android:text="@string/view_graphs"
             android:textColor="@color/white" />
 
         <Button
@@ -107,7 +109,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/btn_background"
-            android:text="View Next Page"
+            android:text="@string/view_next_page"
             android:textColor="@color/white" />
 
     </LinearLayout>
