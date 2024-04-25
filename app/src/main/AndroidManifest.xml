@@ -28,9 +28,6 @@
             android:name=".Create_Timesheet"
             android:exported="false" />
         <activity
-            android:name=".Timesheet"
-            android:exported="false" />
-        <activity
             android:name=".AllCategories"
             android:exported="false" />
         <activity
