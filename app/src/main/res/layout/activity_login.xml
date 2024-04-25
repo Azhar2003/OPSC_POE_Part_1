@@ -65,7 +65,7 @@
         android:layout_margin="15dp"
         android:text="sign in"
         android:textColor="#FFFFFFFF"
-        android:backgroundTint="@color/blue"
+        android:background="@drawable/btn_background"
         tools:layout_editor_absoluteX="14dp"
         tools:layout_editor_absoluteY="431dp"
         tools:ignore="MissingConstraints" />
