@@ -1,18 +1,17 @@
 package com.example.opscpoe.Activity
 
-
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
-
 open class BaseActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
-    public override fun onResume() {
+    override fun onResume() {
         super.onResume()
     }
 
