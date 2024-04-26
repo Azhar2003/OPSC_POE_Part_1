@@ -26,7 +26,7 @@ import java.util.*
 class Task_adapter(
     private val context: Add_Task,
     private val taskList: List<Task>,
-    private val setRefreshListener: CreateTask_BottomSheetFragment.setRefreshListener
+    private val setRefreshListener: CreateTask_BottomSheetFragment.SetRefreshListener
 ) : RecyclerView.Adapter<Task_adapter.TaskViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -52,7 +52,7 @@ class Task_adapter(
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val task = taskList[position]
         holder.title.text = task.taskTitle
-        holder.description.text = task.taskDescrption
+        holder.description.text = task.taskDescription
         holder.time.text = task.lastAlarm
         holder.status.text = if (task.isComplete) "COMPLETED" else "UPCOMING"
         holder.options.setOnClickListener { showPopUpMenu(holder.options, position) }

@@ -60,11 +60,11 @@ class Add_Task : AppCompatActivity(), CreateTask_BottomSheetFragment.SetRefreshL
 
     private fun getSavedTasks() {
         class GetSavedTasks : AsyncTask<Void, Void, List<Task>>() {
-            override fun doInBackground(vararg voids: Void): List<Task> {
+            override fun doInBackground(vararg voids: Void): List<Task>? {
                 return DatabaseClient.getInstance(applicationContext)
-                    ?.appDatabase
-                    ?.dataBaseAction()
-                    ?.getAllTasksList()
+                    .appDatabase
+                    .dataBaseAction()
+                    .getAllTasksList()
             }
 
             override fun onPostExecute(tasks: List<Task>) {

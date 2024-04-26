@@ -2,18 +2,14 @@ package com.example.opscpoe.bottomSheetFragment
 
 import android.annotation.SuppressLint
 import android.app.*
-import android.content.Context
-import android.content.Intent
 import android.os.AsyncTask
 import android.os.Build
-import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.core.app.NotificationCompat
 import butterknife.ButterKnife
 import butterknife.Unbinder
 import com.example.opscpoe.R
@@ -22,7 +18,6 @@ import com.example.opscpoe.database.DatabaseClient
 import com.example.opscpoe.model.Task
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import java.text.SimpleDateFormat
 import java.util.*
 
 class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
@@ -140,7 +135,7 @@ class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
             @SuppressLint("WrongThread")
             override fun doInBackground(vararg voids: Void): Void? {
                 val createTask = Task()
-                createTask.taskDescrption = addTaskDescription.text.toString()
+                createTask.taskDescription = addTaskDescription.text.toString()
                 createTask.date = taskDate.text.toString()
                 createTask.lastAlarm = taskTime.text.toString()
                 createTask.event = taskEvent.text.toString()
@@ -192,7 +187,7 @@ class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
 
     private fun setDataInUI() {
         addTaskTitle.setText(task.taskTitle)
-        addTaskDescription.setText(task.taskDescrption)
+        addTaskDescription.setText(task.taskDescription)
         taskDate.setText(task.date)
         taskTime.setText(task.lastAlarm)
         taskEvent.setText(task.event)

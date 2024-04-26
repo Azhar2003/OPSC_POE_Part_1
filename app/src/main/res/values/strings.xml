@@ -52,5 +52,11 @@
         <string name="Sign_in">Sign in\n</string>
         <string name="Sign_up">Sign up</string>
     <string name="sign_in">sign in</string>
+    <string name="add_task">Add task\n</string>
+    <string name="task_description">Description\n</string>
+    <string name="task_category">Category</string>
+    <string name="task_date">Task Date</string>
+    <string name="task_start_time">Start Time\n</string>
+    <string name="task_end_time">End Time\n</string>
 
 </resources>

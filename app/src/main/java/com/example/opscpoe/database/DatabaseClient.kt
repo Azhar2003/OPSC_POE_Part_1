@@ -1,27 +1,35 @@
 package com.example.opscpoe.database
 
 import android.content.Context
-import androidx.room.Room.databaseBuilder
+import androidx.room.Room
 
+object DatabaseClient {
+    private var mInstance: DatabaseClient? = null
 
-class DatabaseClient private constructor(private val mCtx: Context) {
-    //our app database object
-    val appDatabase: AppDatabase
+    // Our app database object
+    lateinit var appDatabase: AppDatabase
 
-    init {
-        appDatabase = databaseBuilder(mCtx, AppDatabase::class.java, "Task.db")
+    fun getInstance(context: Context): DatabaseClient {
+        if (mInstance == null) {
+            synchronized(this) {
+                mInstance = DatabaseClient
+                mInstance!!.initialize(context)
+            }
+        }
+        return mInstance!!
+    }
+
+    private fun initialize(context: Context) {
+        appDatabase = Room.databaseBuilder(
+            context.applicationContext,
+            AppDatabase::class.java,
+            "Task.db"
+        )
             .fallbackToDestructiveMigration()
             .build()
     }
 
-    companion object {
-        private var mInstance: DatabaseClient? = null
-        @Synchronized
-        fun getInstance(mCtx: Context): DatabaseClient? {
-            if (mInstance == null) {
-                mInstance = DatabaseClient(mCtx)
-            }
-            return mInstance
-        }
+    fun getAppDatabase(): AppDatabase {
+        return appDatabase
     }
 }

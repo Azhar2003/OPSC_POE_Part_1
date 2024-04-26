@@ -8,10 +8,18 @@ import io.github.inflationx.calligraphy3.CalligraphyConfig
 import io.github.inflationx.calligraphy3.CalligraphyInterceptor
 import io.github.inflationx.viewpump.ViewPump
 
-
 class AppController : Application(), ComponentCallbacks2 {
+
+    companion object {
+        private lateinit var mInstance: AppController
+
+        @JvmStatic
+        fun getInstance(): AppController = mInstance
+    }
+
     override fun onCreate() {
         super.onCreate()
+        mInstance = this
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
         ViewPump.init(
             ViewPump.builder()
@@ -19,12 +27,7 @@ class AppController : Application(), ComponentCallbacks2 {
         )
     }
 
-    override fun attachBaseContext(base: Context) {
+    override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
-    }
-
-    companion object {
-        @get:Synchronized
-        val instance: AppController? = null
     }
 }

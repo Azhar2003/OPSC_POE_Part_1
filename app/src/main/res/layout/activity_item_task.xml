@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    tools:context=".ItemTask"
     app:cardUseCompatPadding="true"
     app:cardElevation="5dp"
     app:cardCornerRadius="20dp"
