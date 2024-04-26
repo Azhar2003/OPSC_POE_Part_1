@@ -63,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="sign in"
+        android:text="Log in"
         android:textColor="#FFFFFFFF"
         android:background="@drawable/btn_background"
         tools:layout_editor_absoluteX="14dp"
