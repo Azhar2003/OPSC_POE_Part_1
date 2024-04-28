@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllCategories"
+    tools:context=".model.AllCategories"
     android:background="@color/lightWhite">
 
 
@@ -150,7 +150,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="-10dp"
                 android:src="@drawable/categories_inrs"
-                android:contentDescription="TODO" />
+                android:contentDescription="@string/todo" />
         </RelativeLayout>
 
         <RelativeLayout

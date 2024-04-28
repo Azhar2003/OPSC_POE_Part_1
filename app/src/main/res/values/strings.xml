@@ -59,4 +59,23 @@
     <string name="task_start_time">Start Time\n</string>
     <string name="task_end_time">End Time\n</string>
 
+
+    <!-- Strings for expand_all_button1 and total_hours_button1 -->
+    <string name="expand_all_button1">Expand All 1</string>
+    <string name="total_hours_button1">Total Hours 1</string>
+
+    <!-- Strings for expand_all_button2 and total_hours_button2 -->
+    <string name="expand_all_button2">Expand All 2</string>
+    <string name="total_hours_button2">Total Hours 2</string>
+
+    <!-- Strings for expand_all_button3 and total_hours_button3 -->
+    <string name="expand_all_button3">Expand All 3</string>
+    <string name="total_hours_button3">Total Hours 3</string>
+
+    <!-- Strings for expand_all_button4 and total_hours_button4 -->
+    <string name="expand_all_button4">Expand All 4</string>
+    <string name="total_hours_button4">Total Hours 4</string>
+    <string name="log_in">Log in</string>
+    <string name="todo">TODO</string>
+
 </resources>

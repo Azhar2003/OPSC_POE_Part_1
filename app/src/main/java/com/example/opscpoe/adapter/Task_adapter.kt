@@ -91,7 +91,7 @@ class Task_adapter(
                 }
                 R.id.menuUpdate -> {
                     val createTaskBottomSheetFragment = CreateTask_BottomSheetFragment()
-                    createTaskBottomSheetFragment.setTaskId(task.taskId, true, context, context)
+                    createTaskBottomSheetFragment.setTaskId(task.taskId, true,this )
                     createTaskBottomSheetFragment.show(context.supportFragmentManager, createTaskBottomSheetFragment.tag)
                 }
                 R.id.menuComplete -> {

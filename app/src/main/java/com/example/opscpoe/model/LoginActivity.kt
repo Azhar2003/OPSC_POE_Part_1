@@ -1,4 +1,4 @@
-package com.example.opscpoe
+package com.example.opscpoe.model
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.opscpoe.R
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
@@ -39,7 +40,6 @@ class LoginActivity : AppCompatActivity() {
         tvRedirectLogin.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
             // Removed finish() to allow users to return to the login activity using the back button.
-            finish()
         }
     }
 
@@ -47,10 +47,12 @@ class LoginActivity : AppCompatActivity() {
         val email = etSEmailAddress.text.toString()
         val password = etSPassword.text.toString()
 
-        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) {
-            if (it.isSuccessful) {
+        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
+            if (task.isSuccessful) {
                 Toast.makeText(this, "Successfully Logged In", Toast.LENGTH_SHORT).show()
-                // Consider adding an Intent to navigate the user to the main part of your application here.
+                // Navigate to the AllCategories activity upon successful login
+                startActivity(Intent(this, AllCategories::class.java))
+                finish() // Finish the current activity to prevent users from going back to the login screen
             } else {
                 Toast.makeText(this, "Log In failed", Toast.LENGTH_SHORT).show()
             }

@@ -4,29 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".model.MainActivity">
 
 
     <Button
         android:id="@+id/Login"
+        style="?android:attr/buttonBarButtonStyle"
         android:layout_width="199dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/btn_background"
+        android:minWidth="64dp"
+        android:minHeight="54dp"
+        android:onClick="buttonClick"
         android:text="@string/login"
         android:textColor="@color/white"
-        style="?android:attr/buttonBarButtonStyle" />
+
+        />
 
     <Button
         android:id="@+id/SignUp"
+        style="?android:attr/buttonBarButtonStyle"
         android:layout_width="199dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/btn_background"
+        android:minWidth="64dp"
+        android:minHeight="54dp"
+        android:onClick="buttonClick"
         android:text="@string/signup"
-        android:textColor="@color/white"
-        style="?android:attr/buttonBarButtonStyle" />
+        android:textColor="@color/white" />
+
+
 
 </LinearLayout>
