@@ -1,7 +1,10 @@
 package com.example.opscpoe.Activity
 
 import android.content.ComponentName
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.AsyncTask
 import android.os.Bundle
 import android.view.View
@@ -18,6 +21,8 @@ import com.example.opscpoe.bottomSheetFragment.CreateTask_BottomSheetFragment
 import com.example.opscpoe.bottomSheetFragment.ShowCalendarView_BottomSheet
 import com.example.opscpoe.database.DatabaseClient
 import com.example.opscpoe.model.Task
+import com.github.dhaval2404.imagepicker.ImagePicker
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Add_Task : AppCompatActivity(), CreateTask_BottomSheetFragment.SetRefreshListener {
 
@@ -27,6 +32,8 @@ class Add_Task : AppCompatActivity(), CreateTask_BottomSheetFragment.SetRefreshL
     private var tasks: List<Task> = ArrayList()
     private lateinit var noDataImage: ImageView
     private lateinit var calendar: ImageView
+    private lateinit var imageView: ImageView
+    private lateinit var button: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +50,7 @@ class Add_Task : AppCompatActivity(), CreateTask_BottomSheetFragment.SetRefreshL
             val showCalendarViewBottomSheet = ShowCalendarView_BottomSheet()
             showCalendarViewBottomSheet.show(supportFragmentManager, showCalendarViewBottomSheet.tag)
         }
+
     }
 
     private fun setUpViews() {
@@ -80,4 +88,27 @@ class Add_Task : AppCompatActivity(), CreateTask_BottomSheetFragment.SetRefreshL
     override fun refresh() {
         getSavedTasks()
     }
+    fun onCreate2(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_create_timesheet)
+
+        supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.BLUE))
+
+        imageView = findViewById(R.id.imageView2)
+        button = findViewById(R.id.floatingActionButton)
+
+        button.setOnClickListener {
+            ImagePicker.with(this)
+                .crop()                     //Crop image(Optional), Check Customization for more option
+                .compress(1024)             //Final image size will be less than 1 MB(Optional)
+                .maxResultSize(1080, 1080)  //Final image resolution will be less than 1080 x 1080(Optional)
+                .start()
+        }
+
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        imageView.setImageURI(data?.data)
+    }
+
 }

@@ -42,7 +42,6 @@
                 android:layout_marginTop="80dp"
                 android:backgroundTint="@color/black"
                 android:clickable="true"
-                android:contentDescription="@string/todo"
                 android:tint="@color/white"
                 app:srcCompat="@drawable/baseline_add_a_photo_24" />
         </RelativeLayout>
