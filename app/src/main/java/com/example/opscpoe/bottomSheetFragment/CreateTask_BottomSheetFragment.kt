@@ -56,7 +56,7 @@ class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
     fun setTaskId(taskId: Int, isEdit: Boolean, setRefreshListener: Add_Task) {
         this.taskId = taskId
         this.isEdit = isEdit
-        this.Activity = activity
+        this.Activity = Activity
         this.setRefreshListener = setRefreshListener
     }
 
