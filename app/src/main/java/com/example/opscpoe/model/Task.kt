@@ -12,8 +12,6 @@ data class Task(
     @ColumnInfo(name = "date") var date: String = "",
     @ColumnInfo(name = "taskDescription") var taskDescription: String = "",
     @ColumnInfo(name = "isComplete") var isComplete: Boolean = false,
-    @ColumnInfo(name = "firstAlarmTime") var firstAlarmTime: String = "",
-    @ColumnInfo(name = "secondAlarmTime") var secondAlarmTime: String = "",
-    @ColumnInfo(name = "lastAlarm") var lastAlarm: String = "",
-    @ColumnInfo(name = "event") var event: String = ""
+    @ColumnInfo(name = "EndTime") var endTime: String = ""
+
 ) : Serializable

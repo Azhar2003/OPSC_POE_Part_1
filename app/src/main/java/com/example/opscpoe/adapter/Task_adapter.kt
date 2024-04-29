@@ -25,7 +25,8 @@ class Task_adapter(
     private val context: Add_Task,
     private val taskList: List<Task>,
     private val setRefreshListener: CreateTask_BottomSheetFragment.SetRefreshListener
-) : RecyclerView.Adapter<Task_adapter.TaskViewHolder>() {
+) : RecyclerView.Adapter<Task_adapter.TaskViewHolder>(),
+    CreateTask_BottomSheetFragment.SetRefreshListener {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private val dateFormat = SimpleDateFormat("EE dd MMM yyyy", Locale.US)
@@ -39,7 +40,8 @@ class Task_adapter(
         val description: TextView = itemView.findViewById(R.id.description)
         val status: TextView = itemView.findViewById(R.id.status)
         val options: ImageView = itemView.findViewById(R.id.options)
-        val time: TextView = itemView.findViewById(R.id.time)
+        val imageView3: ImageView = itemView.findViewById(R.id.imageView3)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
@@ -51,7 +53,6 @@ class Task_adapter(
         val task = taskList[position]
         holder.title.text = task.taskTitle
         holder.description.text = task.taskDescription
-        holder.time.text = task.lastAlarm
         holder.status.text = if (task.isComplete) "COMPLETED" else "UPCOMING"
         holder.options.setOnClickListener { showPopUpMenu(holder.options, position) }
 
@@ -148,5 +149,9 @@ class Task_adapter(
 
     override fun getItemCount(): Int {
         return taskList.size
+    }
+
+    override fun refresh() {
+        TODO("Not yet implemented")
     }
 }

@@ -27,7 +27,7 @@ class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
     private lateinit var addTaskDescription: EditText
     private lateinit var taskDate: EditText
     private lateinit var taskTime: EditText
-    private lateinit var taskEvent: EditText
+    private lateinit var taskEndTime: EditText
     private lateinit var addTask: Button
     private var taskId: Int = 0
     private var isEdit: Boolean = false
@@ -108,7 +108,31 @@ class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
             }
             true
         }
+
+        taskEndTime.setOnTouchListener { view, motionEvent ->
+            if (motionEvent.action == MotionEvent.ACTION_UP) {
+                val c = Calendar.getInstance()
+                mHour = c[Calendar.HOUR_OF_DAY]
+                mMinute = c[Calendar.MINUTE]
+                timePickerDialog = TimePickerDialog(
+                    activity,
+                    TimePickerDialog.OnTimeSetListener { view12, hourOfDay, minute ->
+                        taskTime.setText("$hourOfDay:$minute")
+                        timePickerDialog.dismiss()
+                    }, mHour, mMinute, false
+                )
+                timePickerDialog.show()
+            }
+            true
+        }
+
+
+
     }
+
+
+
+
 
     private fun validateFields(): Boolean {
         if (addTaskTitle.text.toString().isEmpty()) {
@@ -123,7 +147,7 @@ class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
         } else if (taskTime.text.toString().isEmpty()) {
             Toast.makeText(activity, "Please enter time", Toast.LENGTH_SHORT).show()
             return false
-        } else if (taskEvent.text.toString().isEmpty()) {
+        } else if (taskEndTime.text.toString().isEmpty()) {
             Toast.makeText(activity, "Please enter an event", Toast.LENGTH_SHORT).show()
             return false
         }
@@ -137,8 +161,7 @@ class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
                 val createTask = Task()
                 createTask.taskDescription = addTaskDescription.text.toString()
                 createTask.date = taskDate.text.toString()
-                createTask.lastAlarm = taskTime.text.toString()
-                createTask.event = taskEvent.text.toString()
+                createTask.endTime = taskEndTime.text.toString()
                 if (!isEdit) {
                     DatabaseClient.getInstance(Activity)?.appDatabase
                         ?.dataBaseAction()
@@ -151,7 +174,7 @@ class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
                             addTaskDescription.text.toString(),
                             taskDate.text.toString(),
                             taskTime.text.toString(),
-                            taskEvent.text.toString()
+                            taskEndTime.text.toString()
                         )
                 }
                 return null
@@ -189,8 +212,7 @@ class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
         addTaskTitle.setText(task.taskTitle)
         addTaskDescription.setText(task.taskDescription)
         taskDate.setText(task.date)
-        taskTime.setText(task.lastAlarm)
-        taskEvent.setText(task.event)
+        taskEndTime.setText(task.endTime)
     }
 
     interface SetRefreshListener {
