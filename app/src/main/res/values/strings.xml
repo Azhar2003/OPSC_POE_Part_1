@@ -43,7 +43,7 @@
     <string name="sat">SAT</string>
     <string name="usernameEditText">Username</string>
     <string name="passwordEditText">Password</string>
-    <string name="already_have_an_account_login">Already have an account</string>
+    <string name="already_have_an_account_login"> Create an account </string>
         <string name="email">Email\n</string>
         <string name="password">Password</string>
         <string name="btnSign_in">Sign in\n</string>
