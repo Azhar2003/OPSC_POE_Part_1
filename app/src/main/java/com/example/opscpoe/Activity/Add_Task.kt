@@ -1,20 +1,16 @@
 package com.example.opscpoe.Activity
 
-import android.content.ComponentName
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.AsyncTask
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.opscpoe.R
 import com.example.opscpoe.adapter.Task_adapter
 import com.example.opscpoe.bottomSheetFragment.CreateTask_BottomSheetFragment
@@ -42,7 +38,7 @@ class Add_Task : AppCompatActivity(), CreateTask_BottomSheetFragment.SetRefreshL
         setUpAdapter()
         addTask.setOnClickListener {
             val createTaskBottomSheetFragment = CreateTask_BottomSheetFragment()
-            createTaskBottomSheetFragment.setTaskId(0, false, this, this@Add_Task)
+            createTaskBottomSheetFragment.setTaskId(0, false, this)
             createTaskBottomSheetFragment.show(supportFragmentManager, createTaskBottomSheetFragment.tag)
         }
         getSavedTasks()

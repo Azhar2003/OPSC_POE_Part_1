@@ -53,7 +53,7 @@ class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
         override fun onSlide(bottomSheet: View, slideOffset: Float) {}
     }
 
-    fun setTaskId(taskId: Int, isEdit: Boolean, setRefreshListener: SetRefreshListener, activity: Add_Task) {
+    fun setTaskId(taskId: Int, isEdit: Boolean, setRefreshListener: Add_Task) {
         this.taskId = taskId
         this.isEdit = isEdit
         this.Activity = activity

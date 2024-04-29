@@ -2,7 +2,6 @@ package com.example.opscpoe.adapter
 
 import android.app.AlertDialog
 import android.app.Dialog
-import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.AsyncTask
@@ -14,7 +13,6 @@ import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.opscpoe.R
 import com.example.opscpoe.Activity.Add_Task
 import com.example.opscpoe.bottomSheetFragment.CreateTask_BottomSheetFragment
