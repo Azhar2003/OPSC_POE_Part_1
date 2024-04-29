@@ -14,6 +14,7 @@ import butterknife.ButterKnife
 import butterknife.Unbinder
 import com.example.opscpoe.R
 import com.example.opscpoe.Activity.Add_Task
+import com.example.opscpoe.adapter.Task_adapter
 import com.example.opscpoe.database.DatabaseClient
 import com.example.opscpoe.model.Task
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -53,7 +54,7 @@ class CreateTask_BottomSheetFragment : BottomSheetDialogFragment() {
         override fun onSlide(bottomSheet: View, slideOffset: Float) {}
     }
 
-    fun setTaskId(taskId: Int, isEdit: Boolean, setRefreshListener: Add_Task) {
+    fun setTaskId(taskId: Int, isEdit: Boolean, setRefreshListener: Task_adapter) {
         this.taskId = taskId
         this.isEdit = isEdit
         this.Activity = Activity
